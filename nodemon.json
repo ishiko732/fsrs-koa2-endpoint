@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "*.test.ts",
+    "*.spect.ts"
+  ],
+  "ext": "ts",
+  "exec": "pnpm ts-node -r tsconfig-paths/register src/index.ts"
+}

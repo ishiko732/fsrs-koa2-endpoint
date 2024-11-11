@@ -1,0 +1,37 @@
+{
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "skipLibCheck": false,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+
+    "outDir": "./dist",
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["node_modules/@types", "typings"],
+    "baseUrl": ".",
+    "paths": {
+      "@bootstrap/*": ["./src/bootstrap/*"],
+      "@controller/*": ["./src/controller/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@/*": ["./src/*"]
+    }
+  }
+}
