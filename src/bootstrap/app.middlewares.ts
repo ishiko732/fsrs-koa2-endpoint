@@ -1,4 +1,4 @@
-import cors from '@bootstrap/cors'
+import cors from './cors'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 

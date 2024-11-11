@@ -1,5 +1,5 @@
-import { TRouter } from '@bootstrap/types'
-import tsfsrsController from '@controller/ts-fsrs'
+import { TRouter } from '../../bootstrap/types'
+import tsfsrsController from './index'
 
 const routers: TRouter = {
   ['tsfsrs/hello']: {

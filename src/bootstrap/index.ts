@@ -1,9 +1,9 @@
 import Koa from 'koa'
-import routers from '@bootstrap/router'
-import root from '@controller/router'
-import { useMiddlewares } from '@bootstrap/app.middlewares'
+import routers from './router'
+import root from '../controller/router'
+import { useMiddlewares } from './app.middlewares'
 
-const createServer = async (): Promise<Koa> => {
+const createServer = (): Koa => {
   const koa: Koa = new Koa()
 
   useMiddlewares(koa)

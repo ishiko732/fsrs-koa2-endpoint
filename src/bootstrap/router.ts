@@ -1,5 +1,5 @@
-import { TRouter } from '@bootstrap/types'
 import Router from 'koa-router'
+import { TRouter } from './types'
 
 export default function routers(root: TRouter): Router {
   const router = new Router()

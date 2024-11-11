@@ -25,13 +25,13 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "typeRoots": ["node_modules/@types", "typings"],
-    "baseUrl": ".",
-    "paths": {
-      "@bootstrap/*": ["./src/bootstrap/*"],
-      "@controller/*": ["./src/controller/*"],
-      "@services/*": ["./src/services/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@/*": ["./src/*"]
-    }
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@bootstrap/*": ["./src/bootstrap/*"],
+    //   "@controller/*": ["./src/controller/*"],
+    //   "@services/*": ["./src/services/*"],
+    //   "@utils/*": ["./src/utils/*"],
+    //   "@/*": ["./src/*"]
+    // }
   }
 }
