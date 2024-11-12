@@ -1,11 +1,12 @@
 {
   "watch": [
-    "src"
+    "src",
+    ".env"
   ],
   "ignore": [
     "*.test.ts",
     "*.spect.ts"
   ],
   "ext": "ts",
-  "exec": "pnpm ts-node -r tsconfig-paths/register src/index.ts"
+  "exec": "pnpm ts-node src/index.ts"
 }
