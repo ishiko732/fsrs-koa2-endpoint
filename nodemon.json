@@ -1,12 +1,15 @@
 {
   "watch": [
     "src",
-    ".env"
+    ".env",
+    "nodemon.json",
+    "tsconfig.json",
+    "package.json"
   ],
   "ignore": [
     "*.test.ts",
     "*.spect.ts"
   ],
   "ext": "ts",
-  "exec": "pnpm ts-node src/index.ts"
+  "exec": "pnpm tsx src/index.ts"
 }
