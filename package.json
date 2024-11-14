@@ -2,15 +2,30 @@
   "name": "example-ts-fsrs-koa2-endpoint",
   "version": "0.0.1",
   "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
   "description": "Example of running ts-fsrs with Koa on the Vercel platform.",
   "scripts": {
     "start": "export NODE_ENV=production; node ./dist/index.js",
     "dev": "nodemon",
     "lint": "eslint ./",
-    "build:esbuild": "node ./build.js"
+    "build:rm": "rm -rf dist/ && mkdir dist",
+    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/",
+    "build:install": "cd dist/ && pnpm install --prod --frozen-lockfile",
+    "build": "pnpm run build:rm && pkgroll && pnpm run build:cp && pnpm run build:install"
   },
   "dependencies": {
     "@fast-csv/parse": "^5.0.2",
+    "@types/koa": "^2.15.0",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa-compose": "^3.2.8",
+    "@types/koa-router": "^7.4.8",
     "dayjs": "^1.11.13",
     "debug": "^4.3.7",
     "dotenv": "^16.4.5",
@@ -23,19 +38,16 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
-    "@types/koa": "^2.15.0",
-    "@types/koa-bodyparser": "^4.3.12",
-    "@types/koa-compose": "^3.2.8",
-    "@types/koa-router": "^7.4.8",
     "@types/node": "^20.17.6",
     "esbuild": "^0.24.0",
     "esbuild-node-externals": "^1.15.0",
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.12.0",
+    "pkgroll": "^2.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.13.0"
+    "typescript-eslint": "^8.14.0"
   },
   "engines": {
     "node": "20.x"

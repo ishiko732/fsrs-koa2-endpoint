@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs'
-import init, { Fsrs, InitOutput, ItemState } from 'fsrs-browser/fsrs_browser'
+import init, { Fsrs, InitOutput, ItemState } from 'fsrs-browser/fsrs_browser.js'
 let initOutput: InitOutput | null = null
 
 export class FSRSBrowserService {
