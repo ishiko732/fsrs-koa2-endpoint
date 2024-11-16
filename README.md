@@ -1,2 +1,2 @@
-# ts-fsrs-koa2-endpoint
-Example of running ts-fsrs with Koa2 on the Vercel platform.
+# FSRS-Examples
+This project demonstrates the use of ts-fsrs in combination with fsrs-rs-nodejs and WebAssembly (WASM) .
