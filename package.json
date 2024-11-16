@@ -16,7 +16,7 @@
     "dev": "nodemon",
     "lint": "eslint ./",
     "build:rm": "rm -rf dist/ && mkdir dist",
-    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/",
+    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && vercel.json dist/",
     "build:install": "cd dist/ && pnpm install --prod --frozen-lockfile",
     "build": "pnpm run build:rm && pkgroll && pnpm run build:cp && pnpm run build:install"
   },
@@ -47,7 +47,8 @@
     "pkgroll": "^2.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.14.0"
+    "typescript-eslint": "^8.14.0",
+    "vercel": "latest"
   },
   "engines": {
     "node": "20.x"
