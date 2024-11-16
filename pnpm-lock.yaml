@@ -35,6 +35,12 @@ importers:
       fsrs-browser:
         specifier: ^1.4.3
         version: 1.4.3
+      fsrs-rs-nodejs:
+        specifier: ^0.5.0
+        version: 0.5.0
+      fsrs-rs-nodejs-linux-x64-gnu:
+        specifier: ^0.5.0
+        version: 0.5.0
       koa:
         specifier: ^2.15.3
         version: 2.15.3
@@ -1463,6 +1469,88 @@ packages:
 
   fsrs-browser@1.4.3:
     resolution: {integrity: sha512-A4KMpoQJM3/kqtmdl0V9E22w4KiL7P4/PlhWU9XuUpNkBEZ5FX83OZUrASkzUUznYKthf8q5f3yjsY2mCwCWPw==}
+
+  fsrs-rs-nodejs-android-arm-eabi@0.5.0:
+    resolution: {integrity: sha512-IiWLg5oGYR4oqnvXEwRSrUDWVxckz9lC1odMbDlaVYspuE6u+hXUsP58fhJa0Lfdeg6wYD9crmocUYoDp78OQA==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+
+  fsrs-rs-nodejs-android-arm64@0.5.0:
+    resolution: {integrity: sha512-8/hWI1rDs/oG6zZLoFsB9pNgC3opubbokybmFfJNIMb8NV7FnzWT8YL36kZAGOgu3ZIxdDcaN34iNcEoqdiYuw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+
+  fsrs-rs-nodejs-darwin-arm64@0.5.0:
+    resolution: {integrity: sha512-0k2O4TKHspu1/O0nMwruZkLFNyyUkCfDkF3jui1D/nA5YMVsoyku1kPsttZt9DDruC1/w15IiSgav8rTUU9Qmg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  fsrs-rs-nodejs-darwin-x64@0.5.0:
+    resolution: {integrity: sha512-8kI7D1OWatSbqllBp3BPJt8+D89UzONhF1e2EtC3ftdgaSuAYQQtk4fMKv3+GrzSbKIpe6gYy3BxxftjLW6NsA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+
+  fsrs-rs-nodejs-freebsd-x64@0.5.0:
+    resolution: {integrity: sha512-ECUQvzjqoKmxtLNsGDM+jwf1fZnqTOqdhD9qogYEnSMLzLx9ufvPDxCxQdvptqkeDvPMkQewQoLdngU5NElk/g==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+
+  fsrs-rs-nodejs-linux-arm-gnueabihf@0.5.0:
+    resolution: {integrity: sha512-PXhIW5jDuI5TdXGzryF/CPC/hY7twZx1AF1cxb9HjHM+Fzdsxhg+wfC4/+NMrwyainFD1kZmrJNeEb0exUMSAA==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+
+  fsrs-rs-nodejs-linux-arm64-gnu@0.5.0:
+    resolution: {integrity: sha512-6fkyeX3tfEsy+igfvMbqGBnVtT5PFGbnkuZHe3B1ALJvPysz2+rO1oNDDRny7Sgse7Fjtd9Qbq3RL8L0EPyPMw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+
+  fsrs-rs-nodejs-linux-arm64-musl@0.5.0:
+    resolution: {integrity: sha512-kyiyfreaDQW640JBKZ3hJuqp3gdIOaEqu0QVf4EozySKCEDnGt3O/ER5/031qbeE7uwS27vPDs+/3M1zGKuzDA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+
+  fsrs-rs-nodejs-linux-x64-gnu@0.5.0:
+    resolution: {integrity: sha512-m+8pZR7V/fq5vYaRvW956XpI9RfnmTlGJB8j1s72OeacN32C7bxLnHWbE69Ai/ZeSnYV92Uug4fatMz6U/IgUw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
+  fsrs-rs-nodejs-linux-x64-musl@0.5.0:
+    resolution: {integrity: sha512-gCLgCSBPz/Za33B+/MaA8NjtXLDa9ep2o2rLPj4HBClBdzDMSXI59ajOr/cxX8AyNqIDVDoF/0ce4shca1iCCA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
+  fsrs-rs-nodejs-win32-arm64-msvc@0.5.0:
+    resolution: {integrity: sha512-zfiJPxByfr56Rd6dKhd3PRU7oGsw83gZpG8JIGgGJzHG9VxUboDvr24Goev4GcB3UL0mkuwlfmmu7D1REN178w==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+
+  fsrs-rs-nodejs-win32-ia32-msvc@0.5.0:
+    resolution: {integrity: sha512-iwmjJlyxuALCr9dfYZki2hlPQ2BBsGnF+LWTvmi+Wd+UFDvKJJIlgebg5cYBw7/BIA98HB5968X58A18znjwLg==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+
+  fsrs-rs-nodejs-win32-x64-msvc@0.5.0:
+    resolution: {integrity: sha512-BimVJqQpA51otznDo+BskoWtzr1NJGgg4fI7Ui3KhTn/i/boE2N0VKeZ8J4YoYqHeLPoYfpiL8UY7T/WBTkTVw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+
+  fsrs-rs-nodejs@0.5.0:
+    resolution: {integrity: sha512-zEvRnAtmuSLjl/bn8iRcT9SEypldQQ4qlzlMdbLSvx91o3snVkJl1+hsHO9rPY5YWuFa0q6Tc5BDHwQkEfQp8A==}
+    engines: {node: '>= 10'}
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -3716,6 +3804,60 @@ snapshots:
     optional: true
 
   fsrs-browser@1.4.3: {}
+
+  fsrs-rs-nodejs-android-arm-eabi@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-android-arm64@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-darwin-arm64@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-darwin-x64@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-freebsd-x64@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-linux-arm-gnueabihf@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-linux-arm64-gnu@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-linux-arm64-musl@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-linux-x64-gnu@0.5.0: {}
+
+  fsrs-rs-nodejs-linux-x64-musl@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-win32-arm64-msvc@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-win32-ia32-msvc@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs-win32-x64-msvc@0.5.0:
+    optional: true
+
+  fsrs-rs-nodejs@0.5.0:
+    optionalDependencies:
+      fsrs-rs-nodejs-android-arm-eabi: 0.5.0
+      fsrs-rs-nodejs-android-arm64: 0.5.0
+      fsrs-rs-nodejs-darwin-arm64: 0.5.0
+      fsrs-rs-nodejs-darwin-x64: 0.5.0
+      fsrs-rs-nodejs-freebsd-x64: 0.5.0
+      fsrs-rs-nodejs-linux-arm-gnueabihf: 0.5.0
+      fsrs-rs-nodejs-linux-arm64-gnu: 0.5.0
+      fsrs-rs-nodejs-linux-arm64-musl: 0.5.0
+      fsrs-rs-nodejs-linux-x64-gnu: 0.5.0
+      fsrs-rs-nodejs-linux-x64-musl: 0.5.0
+      fsrs-rs-nodejs-win32-arm64-msvc: 0.5.0
+      fsrs-rs-nodejs-win32-ia32-msvc: 0.5.0
+      fsrs-rs-nodejs-win32-x64-msvc: 0.5.0
 
   function-bind@1.1.2: {}
 

@@ -14,11 +14,12 @@
     "dev": "nodemon",
     "lint": "eslint ./",
     "build:rm": "rm -rf dist/ && mkdir dist",
-    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && cp vercel.json dist/ && cp index.html dist/",
+    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && cp vercel.json dist/ && cp index.html dist/ && cp postinstall.mjs dist/",
     "build:install": "cd dist/ && pnpm install --prod --frozen-lockfile",
     "build:bundle": "pkgroll && mv dist/index.mjs dist/serve.mjs",
     "build:sed": "sed -i 's|./dist/index.mjs|./dist/serve.mjs|g' dist/package.json",
-    "build": "pnpm run build:rm && pnpm run build:bundle && pnpm run build:cp &&pnpm run build:sed  && pnpm run build:install"
+    "build": "pnpm run build:rm && pnpm run build:bundle && pnpm run build:cp &&pnpm run build:sed  && pnpm run build:install",
+    "postinstall": "node ./postinstall.mjs"
   },
   "dependencies": {
     "@fast-csv/parse": "^5.0.2",
@@ -30,6 +31,8 @@
     "debug": "^4.3.7",
     "dotenv": "^16.4.5",
     "fsrs-browser": "^1.4.3",
+    "fsrs-rs-nodejs": "^0.5.0",
+    "fsrs-rs-nodejs-linux-x64-gnu": "^0.5.0",
     "koa": "^2.15.3",
     "koa-bodyparser": "^4.4.1",
     "koa-compose": "^4.1.0",
