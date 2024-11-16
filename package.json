@@ -3,22 +3,22 @@
   "version": "0.0.1",
   "type": "module",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
   "exports": {
     "import": {
-      "types": "./dist/index.d.mts",
       "default": "./dist/index.mjs"
     }
   },
   "description": "Example of running ts-fsrs with Koa on the Vercel platform.",
   "scripts": {
-    "start": "export NODE_ENV=production; node ./dist/index.js",
+    "start": "export NODE_ENV=production; node ./dist/serve.mjs",
     "dev": "nodemon",
     "lint": "eslint ./",
     "build:rm": "rm -rf dist/ && mkdir dist",
     "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && cp vercel.json dist/",
     "build:install": "cd dist/ && pnpm install --prod --frozen-lockfile",
-    "build": "pnpm run build:rm && pkgroll && pnpm run build:cp && pnpm run build:install"
+    "build:bundle": "pkgroll && mv dist/index.mjs dist/serve.mjs",
+    "build:sed": "sed -i 's|./dist/index.mjs|./dist/serve.mjs|g' dist/package.json",
+    "build": "pnpm run build:rm && pnpm run build:bundle && pnpm run build:cp &&pnpm run build:sed  && pnpm run build:install"
   },
   "dependencies": {
     "@fast-csv/parse": "^5.0.2",
