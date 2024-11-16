@@ -14,7 +14,7 @@
     "dev": "nodemon",
     "lint": "eslint ./",
     "build:rm": "rm -rf dist/ && mkdir dist",
-    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && cp vercel.json dist/",
+    "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && cp vercel.json dist/ && cp index.html dist/",
     "build:install": "cd dist/ && pnpm install --prod --frozen-lockfile",
     "build:bundle": "pkgroll && mv dist/index.mjs dist/serve.mjs",
     "build:sed": "sed -i 's|./dist/index.mjs|./dist/serve.mjs|g' dist/package.json",
