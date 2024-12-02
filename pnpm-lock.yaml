@@ -54,8 +54,8 @@ importers:
         specifier: ^13.0.1
         version: 13.0.1
       ts-fsrs:
-        specifier: ^4.4.3
-        version: 4.4.3
+        specifier: ^4.5.0
+        version: 4.5.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.14.0
@@ -1521,7 +1521,6 @@ packages:
   fsrs-rs-nodejs-linux-x64-gnu@0.5.0:
     resolution: {integrity: sha512-m+8pZR7V/fq5vYaRvW956XpI9RfnmTlGJB8j1s72OeacN32C7bxLnHWbE69Ai/ZeSnYV92Uug4fatMz6U/IgUw==}
     engines: {node: '>= 10'}
-    cpu: [x64]
     os: [linux]
 
   fsrs-rs-nodejs-linux-x64-musl@0.5.0:
@@ -2312,8 +2311,8 @@ packages:
     peerDependencies:
       typescript: '>=4.2.0'
 
-  ts-fsrs@4.4.3:
-    resolution: {integrity: sha512-QOmzfsOkYfkHxCI0MOyKhSZ/XME1vbDuKo4c3Km2JGFF3K/K67RpTQvRJdDNwEUq4wa9wTrD3GSC+OPNtvAn0A==}
+  ts-fsrs@4.5.0:
+    resolution: {integrity: sha512-9krBeIQPwqfn6PeWiTkVh1XPV2fLkdeN3yp1f3UiMoA9Uu/ff8OWLRd/xSsbOA2WAk+ekzueQDt3WktAribsaw==}
     engines: {node: '>=18.0.0'}
 
   ts-morph@12.0.0:
@@ -4613,7 +4612,7 @@ snapshots:
     dependencies:
       typescript: 5.6.3
 
-  ts-fsrs@4.4.3: {}
+  ts-fsrs@4.5.0: {}
 
   ts-morph@12.0.0:
     dependencies:

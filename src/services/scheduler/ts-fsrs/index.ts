@@ -1,4 +1,11 @@
-import { createEmptyCard, fsrs, Grade, TypeConvert } from 'ts-fsrs'
+import {
+  createEmptyCard,
+  fsrs,
+  GenSeedStrategyWithCardId,
+  Grade,
+  StrategyMode,
+  TypeConvert
+} from 'ts-fsrs'
 import { cardHandler, recordHandler, recordItemHandler } from './handlers'
 import { TCard, TRecordLog, TRecordLogItem } from '../types'
 import { CURRENT_TIMEZONE } from '../../../utils/convert'
@@ -20,7 +27,11 @@ export class TSFSRSService {
   }
 
   retrievability({ data: card, card_id, params, now }: IRetrievabilityRequest) {
-    const f = fsrs(params)
+    const seedStrategyWithCardId = GenSeedStrategyWithCardId('card_id')
+    const f = fsrs(params).useStrategy(
+      StrategyMode.SEED,
+      seedStrategyWithCardId
+    )
     const retrievability = f.get_retrievability(card, now, false)
 
     return {
@@ -40,7 +51,11 @@ export class TSFSRSService {
     grade
   }: ISchedulerRequest) {
     // repeat the card
-    const f = fsrs(params)
+    const seedStrategyWithCardId = GenSeedStrategyWithCardId('card_id')
+    const f = fsrs(params).useStrategy(
+      StrategyMode.SEED,
+      seedStrategyWithCardId
+    )
 
     let scheduler: TRecordLog | TRecordLogItem
     if (grade) {
@@ -62,8 +77,11 @@ export class TSFSRSService {
   rollback({ data: item, params, card_id, timezone }: IRollbackRequest) {
     // rollback
     const { card, log } = item
-    const f = fsrs(params)
-
+    const seedStrategyWithCardId = GenSeedStrategyWithCardId('card_id')
+    const f = fsrs(params).useStrategy(
+      StrategyMode.SEED,
+      seedStrategyWithCardId
+    )
     const handler = cardHandler.bind(null, card_id ?? '', timezone)
     const rollbackItem = f.rollback(card, log, handler)
     return rollbackItem
@@ -78,7 +96,11 @@ export class TSFSRSService {
     now
   }: IForgetRequest) {
     // forget
-    const f = fsrs(params)
+    const seedStrategyWithCardId = GenSeedStrategyWithCardId('card_id')
+    const f = fsrs(params).useStrategy(
+      StrategyMode.SEED,
+      seedStrategyWithCardId
+    )
 
     const handler = recordItemHandler.bind(null, card_id ?? '', timezone)
     const forgetItem = f.forget(card, now, reset_count, handler)
@@ -93,7 +115,11 @@ export class TSFSRSService {
     now
   }: IReschedulerRequest) {
     // reschedule the card
-    const f = fsrs(params)
+    const seedStrategyWithCardId = GenSeedStrategyWithCardId('card_id')
+    const f = fsrs(params).useStrategy(
+      StrategyMode.SEED,
+      seedStrategyWithCardId
+    )
 
     const handler = recordItemHandler.bind(null, card_id ?? '', timezone)
     const rescheduler = f.reschedule(current_card, history, {

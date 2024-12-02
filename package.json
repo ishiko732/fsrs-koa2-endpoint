@@ -37,7 +37,7 @@
     "koa-bodyparser": "^4.4.1",
     "koa-compose": "^4.1.0",
     "koa-router": "^13.0.1",
-    "ts-fsrs": "^4.4.3"
+    "ts-fsrs": "^4.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
