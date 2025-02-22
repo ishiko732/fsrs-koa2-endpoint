@@ -6,6 +6,11 @@ const routers: TRouter = {
     method: 'get',
     path: '/intro',
     endpoint: fsrsNodejsController.intro
+  },
+  ['nodejs/train']: {
+    method: 'post',
+    path: '/train',
+    endpoint: fsrsNodejsController.train
   }
 }
 
