@@ -14,7 +14,7 @@
       },
       "outputCapture": "std",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "nodemon",
+      "runtimeExecutable": "tsx",
       "restart": true,
       "console": "integratedTerminal",
       "args": ["${workspaceFolder}/src/index.ts"]
