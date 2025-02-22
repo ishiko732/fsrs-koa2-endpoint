@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs'
 import init, { Fsrs, InitOutput, ItemState } from 'fsrs-browser/fsrs_browser.js'
+import { FSRSItem } from '../types'
 let initOutput: InitOutput | null = null
 
 export class FSRSBrowserService {
@@ -10,7 +11,7 @@ export class FSRSBrowserService {
       const wasmBuffer = readFileSync(
         new URL('fsrs_browser_bg.wasm', import.meta.url)
       )
-      initOutput = await init(wasmBuffer.buffer)
+      initOutput = await init(wasmBuffer)
     }
     return this
   }
@@ -44,5 +45,24 @@ export class FSRSBrowserService {
         difficulty: +info.memory.difficulty.toFixed(4)
       }
     }
+  }
+
+  async train(enableShortTerm: boolean, fsrsItems: FSRSItem[]) {
+    // create FSRS instance and optimize
+    const fsrs = new Fsrs()
+    const ratings = new Uint32Array(
+      fsrsItems.flatMap((item) => item.map((review) => review.rating))
+    )
+    const deltaTs = new Uint32Array(
+      fsrsItems.flatMap((item) => item.map((review) => review.deltaT))
+    )
+    const lengths = new Uint32Array(fsrsItems.map((item) => item.length))
+    return fsrs.computeParameters(
+      ratings,
+      deltaTs,
+      lengths,
+      null,
+      enableShortTerm
+    )
   }
 }

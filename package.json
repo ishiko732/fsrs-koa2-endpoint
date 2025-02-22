@@ -12,6 +12,7 @@
   "scripts": {
     "start": "export NODE_ENV=production; node ./dist/serve.mjs",
     "dev": "nodemon",
+    "tsc": "tsc",
     "lint": "eslint ./",
     "build:rm": "rm -rf dist/ && mkdir dist",
     "build:cp": "cp node_modules/fsrs-browser/fsrs_browser_bg.wasm dist/ && cp package.json dist/ && cp pnpm-lock.yaml dist/ && cp vercel.json dist/ && cp index.html dist/ && cp postinstall.mjs dist/",
@@ -31,7 +32,7 @@
     "dayjs": "^1.11.13",
     "debug": "^4.3.7",
     "dotenv": "^16.4.5",
-    "fsrs-browser": "^1.4.3",
+    "fsrs-browser": "^2.0.1",
     "fsrs-rs-nodejs": "^0.8.1",
     "fsrs-rs-nodejs-darwin-arm64": "^0.8.1",
     "fsrs-rs-nodejs-linux-x64-gnu": "^0.5.0",

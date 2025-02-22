@@ -36,8 +36,8 @@ importers:
         specifier: ^16.4.5
         version: 16.4.5
       fsrs-browser:
-        specifier: ^1.4.3
-        version: 1.4.3
+        specifier: ^2.0.1
+        version: 2.0.1
       fsrs-rs-nodejs:
         specifier: ^0.8.1
         version: 0.8.1
@@ -1494,8 +1494,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fsrs-browser@1.4.3:
-    resolution: {integrity: sha512-A4KMpoQJM3/kqtmdl0V9E22w4KiL7P4/PlhWU9XuUpNkBEZ5FX83OZUrASkzUUznYKthf8q5f3yjsY2mCwCWPw==}
+  fsrs-browser@2.0.1:
+    resolution: {integrity: sha512-kGA5AYgSqGjDy3Yl+GxUarvdXjPAOpx+vXxO8oWelSmULOiPvWMArl8v19JeY3ZCSVbNEDVIhLpADEcboO2rrg==}
 
   fsrs-rs-nodejs-android-arm-eabi@0.8.1:
     resolution: {integrity: sha512-AZp+yR67JU0lZAFx4jyNUbWbC7h8G1fM46aYetVswXYdxo3SiqliAE41DVwgbqxcPGnls9FST6r4Eg6oSLhd+Q==}
@@ -3869,7 +3869,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fsrs-browser@1.4.3: {}
+  fsrs-browser@2.0.1: {}
 
   fsrs-rs-nodejs-android-arm-eabi@0.8.1:
     optional: true

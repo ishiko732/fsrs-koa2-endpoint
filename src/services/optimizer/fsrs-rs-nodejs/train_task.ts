@@ -1,7 +1,7 @@
 'use server'
 import { FSRS, FSRSItem, FSRSReview } from 'fsrs-rs-nodejs'
 
-import { FSRSItem as BasicFSRSItem, ProgressValue } from './types'
+import { FSRSItem as BasicFSRSItem, ProgressValue } from '../types'
 
 async function computeParametersWrapper(
   enableShortTerm: boolean,

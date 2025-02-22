@@ -1,6 +1,6 @@
 import type { Context } from 'koa'
 import { project } from '../../services/optimizer/fsrs-rs-nodejs/constrant'
-import { analyzeCSV } from '../../services/optimizer/fsrs-rs-nodejs/collect'
+import { analyzeCSV } from '../../services/optimizer/collect'
 import { readFileSync } from 'node:fs'
 import { trainTask } from '../../services/optimizer/fsrs-rs-nodejs/train_task'
 class FSRSNodejsController {

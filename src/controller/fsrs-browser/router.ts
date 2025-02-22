@@ -12,7 +12,11 @@ const routers: TRouter = {
     path: '/scheduler',
     endpoint: fsrsBrowserController.scheduler
   },
- 
+  ['browser/train']: {
+    method: 'post',
+    path: '/train',
+    endpoint: fsrsBrowserController.train
+  }
 }
 
 export default routers
